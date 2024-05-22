@@ -1,0 +1,14 @@
+﻿@using Agency.Core.Models
+@model Portfolio
+<div  class="container"> 
+     <form method="post" asp-action="DeletePortfolio" class="card" style="width: 18rem;">
+        <img src="~/Upload/Portfolio/@Model.ImageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-text">@Model.Subtitle</p>
+            <input asp-for="@Model.Id"  hidden value="@Model.Id"/>
+            <a class="btn btn-primary" asp-action="Index" asp-controller="Portfolio"> Go back</a>
+            <button type="submit" > Delete</button>
+        </div>
+     </form>
+</div>
